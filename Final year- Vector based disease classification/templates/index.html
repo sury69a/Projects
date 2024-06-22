@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vector-Borne Disease Prediction</title>
+    <link rel="stylesheet" href="static\styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+</head>
+
+<body>
+    <div id="container">
+        <h1>Vector-Borne Disease Prediction</h1>
+        <p>Enter your symptoms to predict the vector-borne disease:</p>
+        <input type="text" id="symptom-search" placeholder="Search symptoms...">
+
+        <!-- Show Entire List button -->
+        <button id="show-all-btn">Show Entire List</button>
+
+        <!-- Symptoms list -->
+        <ul id="symptoms-list"></ul>
+
+        <!-- Selected symptoms list -->
+        <div id="selected-symptoms">
+            <p>Selected Symptoms:</p>
+            <ul id="selected-symptoms-list"></ul>
+        </div>
+        
+        <!-- Loading Indicator -->
+        <div id="loading-indicator" style="display: none;">Loading...</div>
+
+        <button id="predict-btn">Predict</button>
+        <div id="result"></div>
+    </div>
+    <div id="container">
+        <!-- Explanation box -->
+        <div id="explanation-box">
+            <h3>Explanation:</h3>
+            <p>The disease prediction is based on the symptoms you entered.</p>
+            <p>The <strong>Confidence Level</strong> indicates how confident the model is in its prediction.</p>
+            <p>Each symptom is shown with a number:</p>
+            <ul>
+                <li>A <strong>positive number</strong> indicates that the presence of the symptom supports the prediction.</li>
+                <li>A <strong>negative number</strong> indicates that the absence of the symptom supports the prediction.</li>
+            </ul>
+            <div id="explanation-content"></div>
+        </div>
+    </div>
+
+    <script src="static\script.js"></script>
+</body>
+
+</html>
